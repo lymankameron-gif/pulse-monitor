@@ -9,6 +9,14 @@ A small Windows process monitor built with C# and WPF on .NET 8. One window show
 
 ## Build and run
 
+### Cursor / VS Code (live reload)
+
+1. Open this folder in Cursor (File → Open Folder…).
+2. Terminal → Run Task… → **Watch Pulse Monitor** (or press Ctrl+Shift+B — it is the default build task).
+3. Edit and save; `dotnet watch` rebuilds and restarts the app.
+
+### Command line
+
 From the repository root:
 
 ```bash

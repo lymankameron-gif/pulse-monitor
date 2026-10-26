@@ -1,0 +1,39 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Watch Pulse Monitor",
+      "type": "process",
+      "command": "dotnet",
+      "args": [
+        "watch",
+        "run",
+        "--project",
+        "src/PulseMonitor/PulseMonitor.csproj",
+        "-c",
+        "Debug"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "clear": true
+      },
+      "isBackground": true,
+      "problemMatcher": {
+        "base": "$msCompile",
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": ".",
+          "endsPattern": "dotnet watch.*(Started|Hot reload enabled)|Build succeeded"
+        }
+      }
+    }
+  ]
+}
