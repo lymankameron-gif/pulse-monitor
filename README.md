@@ -1,6 +1,6 @@
 # Pulse Monitor
 
-A small Windows process monitor built with C# and WPF on .NET 8. One window shows overall CPU and memory, a searchable process list, and an End task action with confirmation.
+A small Windows process monitor built with C# and WPF on .NET 8. One window shows overall CPU and memory, a searchable process list, End task, and a Settings page for theme and list options.
 
 ## Requirements
 
@@ -27,16 +27,25 @@ dotnet run --project src/PulseMonitor/PulseMonitor.csproj -c Release
 
 Or open `PulseMonitor.sln` in Visual Studio 2022 and press F5.
 
+## Settings
+
+Use the **Settings** tab for theme (Dark / Light / Follow system), accent color, font size, refresh interval, column visibility, memory units, sort defaults, filter options, confirm-before-end-task, always-on-top, opacity, and more. Values persist under `%LocalAppData%\PulseMonitor\settings.json`.
+
 ## Layout
 
 ```text
 src/PulseMonitor/
   App.xaml
   MainWindow.xaml
-  Models/ProcessRow.cs
+  Themes/Dark.xaml
+  Themes/Light.xaml
+  Models/
+  Services/SettingsService.cs
+  Services/ThemeService.cs
   Services/ProcessSampler.cs
   Services/ProcessEnder.cs
   ViewModels/MainViewModel.cs
+  ViewModels/SettingsViewModel.cs
 ```
 
 ## License

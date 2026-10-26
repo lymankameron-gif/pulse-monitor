@@ -7,9 +7,9 @@
         WindowStartupLocation="CenterOwner"
         ShowInTaskbar="False"
         MinWidth="360"
-        Background="{StaticResource WindowBackgroundBrush}"
-        Foreground="{StaticResource PrimaryTextBrush}">
-  <DockPanel Margin="16" Background="{StaticResource WindowBackgroundBrush}">
+        Background="{DynamicResource WindowBackgroundBrush}"
+        Foreground="{DynamicResource PrimaryTextBrush}">
+  <DockPanel Margin="16" Background="{DynamicResource WindowBackgroundBrush}">
     <StackPanel DockPanel.Dock="Bottom"
                 Orientation="Horizontal"
                 HorizontalAlignment="Right"
@@ -28,6 +28,6 @@
     <TextBlock x:Name="MessageText"
                TextWrapping="Wrap"
                MaxWidth="420"
-               Foreground="{StaticResource PrimaryTextBrush}" />
+               Foreground="{DynamicResource PrimaryTextBrush}" />
   </DockPanel>
 </Window>
