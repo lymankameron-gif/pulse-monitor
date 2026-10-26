@@ -6,8 +6,10 @@
         ResizeMode="NoResize"
         WindowStartupLocation="CenterOwner"
         ShowInTaskbar="False"
-        MinWidth="360">
-  <DockPanel Margin="16">
+        MinWidth="360"
+        Background="{StaticResource WindowBackgroundBrush}"
+        Foreground="{StaticResource PrimaryTextBrush}">
+  <DockPanel Margin="16" Background="{StaticResource WindowBackgroundBrush}">
     <StackPanel DockPanel.Dock="Bottom"
                 Orientation="Horizontal"
                 HorizontalAlignment="Right"
@@ -25,6 +27,7 @@
     </StackPanel>
     <TextBlock x:Name="MessageText"
                TextWrapping="Wrap"
-               MaxWidth="420" />
+               MaxWidth="420"
+               Foreground="{StaticResource PrimaryTextBrush}" />
   </DockPanel>
 </Window>
