@@ -1,0 +1,30 @@
+<Window x:Class="PulseMonitor.ConfirmEndTaskWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="End task"
+        SizeToContent="WidthAndHeight"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterOwner"
+        ShowInTaskbar="False"
+        MinWidth="360">
+  <DockPanel Margin="16">
+    <StackPanel DockPanel.Dock="Bottom"
+                Orientation="Horizontal"
+                HorizontalAlignment="Right"
+                Margin="0,16,0,0">
+      <Button Content="End task"
+              Padding="14,4"
+              Margin="0,0,8,0"
+              IsDefault="False"
+              Click="OnEndTask" />
+      <Button Content="Cancel"
+              Padding="14,4"
+              IsCancel="True"
+              IsDefault="True"
+              Click="OnCancel" />
+    </StackPanel>
+    <TextBlock x:Name="MessageText"
+               TextWrapping="Wrap"
+               MaxWidth="420" />
+  </DockPanel>
+</Window>
